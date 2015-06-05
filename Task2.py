@@ -20,7 +20,7 @@ import time
 conn=mysql.connector.connect(user='root',password='joel',host='localhost',database='python')
 mycursor=conn.cursor()
 date=time.localtime(time.time())
-mycursor.execute("""INSERT INTO python VALUES
+mycursor.execute("""INSERT INTO Time VALUES
 (date[3],date[4],date[5])""")
 conn.commit()
 job=cron.new(command='/usr/bin/echo')
